@@ -24,8 +24,8 @@
       </div>
       <div>
          <ul>
-            <li><a href="#">Home </a></li>
-            <li><a href="search">Jobs </a></li>
+            <li><a href="">Home </a></li>
+            <li><a href="#">Jobs </a></li>
             <li><a href="#">About Us </a></li>
             <li><a href="#">Contact Us </a></li>
          </ul>
@@ -33,26 +33,37 @@
    </nav>
 
    <main>
-      <div class="typer">
-         <div class="main-image"></div>
-         <div class="type-center">
-            <div id="typed-strings">
-               <p>Want <strong>Job</strong> !!!</p>
-               <p>Get <strong>Job</strong> here...</p>
-            </div>
-            <span id="typed"></span>
-         </div>
+      <div class="searchbar">
+         <form action="search" method="get">
+            <input type="text" id="query" name="q" placeholder="What">
 
+            <button type="submit">Find Jobs</button>
+         </form>
       </div>
 
-      <div id="jobs">
-         <a href="search"> <u>GET JOB </u></a>
+      <div class="show-jobs">
+         {{# each jobs }}
+         <div class="card">
+            <div class="title">
+               <h2>{{this.title}}</h2>
+            </div>
+
+            <div class="summary">
+               {{this.summary}}
+            </div>
+            <br>
+            <div class="url">
+               <a href="{{this.url}}">Read More</a>
+            </div>
+
+         </div>
+         {{/each}}
       </div>
    </main>
 
    <footer>
       <div class="social-media">
-         <u>FOllOW US ON: </u> <br><br>
+         FOllOW US ON: <br><br>
 
          <div class="media">
             <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a> &nbsp;

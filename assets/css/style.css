@@ -30,7 +30,7 @@ a {
    margin-bottom: 0;
 }
 
-ul li a {
+a {
    color: white
 }
 
@@ -44,14 +44,105 @@ ul li a {
    height: 100%;
    background-position: center;
    background-size: cover;
-   filter: blur(3px)
+   filter: blur(2px);
+
+
 }
-
-
 
 .type-center {
    position: relative;
    top: -400px;
    left: 500px;
-   font-size: 45pt;
+   font-size: 50pt;
+}
+
+#jobs {
+   font-size: 30pt;
+   margin-left: 500px;
+   margin-top: 100px;
+   margin-bottom: 100px;
+}
+
+
+#jobs a {
+   color: black;
+   animation: change 0.5s infinite;
+}
+
+@keyframes change {
+
+   0% {
+      color: black;
+   }
+
+   50% {
+      color: red;
+   }
+
+   100% {
+      color: black
+   }
+
+}
+
+/***  SEARCH BAR  ***/
+
+.searchbar {
+   height: 180px;
+}
+
+.searchbar form {
+   padding-top: 70px;
+   padding-left: 375px;
+}
+
+.searchbar form input {
+   height: 50px;
+}
+
+.searchbar form button {
+   height: 50px;
+   margin-left: 90px;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+/***  CARDS FOR JOBS  ***/
+
+.show-jobs {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 20px;
+
+}
+
+.card {
+   border: 2px solid black;
+   width: 25%;
+   border-radius: 5px;
+   margin: 10px;
+   padding: 10px;
+}
+
+.url a {
+   color: blue;
+}
+
+.url a:hover {
+   text-decoration: underline;
+
+}
+
+.url a:visited {
+   color: red;
+}
+
+footer {
+   background-color: rgb(27, 26, 26);
+   color: white;
+   padding: 40px;
+   /* position: absolute;
+   bottom: 0px; */
+
 }
