@@ -18,6 +18,9 @@ app.set("view engine", "hbs");
 // app.use(expressip().getIpInfoMiddleware);
 app.use(express.static(path.join(__dirname, "assets")));
 
+var users = []
+
+
 // get request to initial url
 // will open index.hbs file
 app.get("/", (req, res) => {
@@ -68,6 +71,19 @@ app.get("/contact", (req, res) => {
     title: 'Job Search'
   })
 });
+
+
+app.post('/feedback', (req, res) => {
+  users.push({
+    name: req.body.name,
+    email: req.body.email,
+    country: req.body.country,
+    message: req.body.message
+
+  })
+
+  res.send()
+})
 
 //server running on port
 app.listen(PORT, () => {
