@@ -1,7 +1,10 @@
-body {
+/* body {
    margin: 0;
    padding: 0;
-   overflow-x: hidden
+   overflow-x: hidden;
+   background-image: url('../images/bg.jpeg');
+   background-repeat: no-repeat;
+   background-size: 100%
 }
 
 .navbar {
@@ -39,22 +42,14 @@ a {
    color: rgb(56, 96, 206);
 }
 
-.main-image {
-   background-image: url("/images/main.png");
-   height: 100%;
-   background-position: center;
-   background-size: cover;
-   filter: blur(2px);
+.main-image {}
 
-
-}
-
-.type-center {
-   position: relative;
+.type-center { */
+/* position: relative;
    top: -400px;
    left: 500px;
-   font-size: 50pt;
-}
+   font-size: 50pt; */
+/* }
 
 #jobs {
    font-size: 30pt;
@@ -67,9 +62,9 @@ a {
 #jobs a {
    color: black;
    animation: change 0.5s infinite;
-}
+} */
 
-@keyframes change {
+/* @keyframes change {
 
    0% {
       color: black;
@@ -83,7 +78,123 @@ a {
       color: black
    }
 
+} */
+/*
+footer {
+   background-color: rgb(27, 26, 26);
+   color: white;
+   padding: 40px; */
+/* position: absolute;
+   bottom: 0px; */
+
+/* } */
+
+* {
+   margin: 0;
+   padding: 0;
 }
+
+body {
+   background-image: url('../images/b1.jpg');
+   /* background-repeat: no-repeat;*/
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   font-family: 'Barlow Condensed', sans-serif;
+
+}
+
+.navbar {
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #232f3e;
+   border-bottom: #f09237 3px solid;
+   color: white
+}
+
+.navbar ul li {
+   display: inline;
+
+}
+
+.title {
+   padding: 15px 0px 20px 35px;
+   font-size: 35px;
+   font-family: 'Fredoka One', cursive;
+}
+
+.navbar>div>ul>li>a {
+   font-size: 22px;
+   margin: 10px 10px 10px 10px;
+
+}
+
+
+.navbar>div>ul>li :hover {
+   color: #f09237;
+   /* font-size: 27px; */
+}
+
+.typer {
+   text-align: center;
+   font-family: 'Nunito', sans-serif;
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   font-size: 70px;
+   text-shadow: 0px 0px 10px black;
+}
+
+.social-media {
+
+   color: white;
+   text-align: right;
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   display: inline;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+.social-media p {
+   color: white;
+   margin-bottom: 10px;
+   margin-right: 10px;
+}
+
+#jobs input,
+#jobs button {
+   background-color: white;
+   border: white 10px solid;
+   border-radius: 100px;
+   font-size: 16px;
+   color: black;
+   box-shadow: 0px 11px 13px 0px rgba(0, 0, 0, 1);
+
+}
+
+#jobs {
+   position: absolute;
+   top: 48%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+}
+
+
+
+/* me */
+
+
 
 /***  SEARCH BAR  ***/
 
@@ -107,6 +218,7 @@ a {
    padding-right: 50px;
 }
 
+
 /***  CARDS FOR JOBS  ***/
 
 .show-jobs {
@@ -114,15 +226,22 @@ a {
    flex-wrap: wrap;
    justify-content: space-around;
    margin: 20px;
+   color: white;
 
 }
 
 .card {
-   border: 2px solid black;
+   border: 2px solid white;
    width: 25%;
-   border-radius: 5px;
+   border-radius: 10px;
    margin: 10px;
    padding: 10px;
+   background-color: lightgray;
+}
+
+.card-title {
+   font-size: 19px;
+   color: black;
 }
 
 .url a {
@@ -131,18 +250,10 @@ a {
 
 .url a:hover {
    text-decoration: underline;
+   /* color: greenyellow; */
 
 }
 
 .url a:visited {
    color: red;
-}
-
-footer {
-   background-color: rgb(27, 26, 26);
-   color: white;
-   padding: 40px;
-   /* position: absolute;
-   bottom: 0px; */
-
 }

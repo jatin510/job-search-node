@@ -8,9 +8,9 @@
    <title>Document</title>
    {{!-- <link rel="stylesheet" href="css/bootstrap.css"> --}}
    <link rel="stylesheet" href="css/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Nunito|Barlow+Condensed|Fredoka+One" rel="stylesheet">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-   <script defer src="js/jquery.js"></script>
    <script defer src="js/axios.js"></script>
    <script defer src="js/typed.js"></script>
    <script defer src="js/main.js"></script>
@@ -18,19 +18,19 @@
 
 <body>
 
-   <nav class="navbar">
+   <div class="navbar">
       <div class="title">
          <p>JOB SEARCH</p>
       </div>
       <div>
          <ul>
-            <li><a href="#">Home </a></li>
-            <li><a href="search">Jobs </a></li>
-            <li><a href="#">About Us </a></li>
-            <li><a href="#">Contact Us </a></li>
+            <li><a href="/">Home </a></li>
+            <li><a href="/search">Jobs </a></li>
+            <li><a href="/about">About Us </a></li>
+            <li><a href="/contact">Contact Us </a></li>
          </ul>
       </div>
-   </nav>
+   </div>
 
    <main>
       <div class="typer">
@@ -46,21 +46,24 @@
       </div>
 
       <div id="jobs">
-         <a href="search"> <u>GET JOB </u></a>
+         <form action="/search" method="get">
+            <input type="text" name="q" placeholder="" id="input-form">
+            <button style="padding-left: 13px;padding-right: 13px;margin-left: 17px;" type="submit">
+               <i class="fas fa-search"></i>
+            </button>
+         </form>
       </div>
    </main>
 
-   <footer>
-      <div class="social-media">
-         <u>FOllOW US ON: </u> <br><br>
+   <div class="social-media">
+      <h5>FOllOW US ON: </h5><br>
 
-         <div class="media">
-            <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a> &nbsp;
-            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-3x"></i></a>&nbsp;
-            <a href="https://www.github.com"><i class="fab fa-github fa-3x"></i></a>&nbsp;
-         </div>
+      <div class="media">
+         <p><a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a></p>
+         <p><a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a></p>
+         <p><a href="https://www.github.com"><i class="fab fa-github fa-2x"></i></a></p>
       </div>
-   </footer>
+   </div>
 </body>
 
 </html>

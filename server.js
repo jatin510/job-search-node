@@ -57,6 +57,18 @@ app.get("/search", (req, res) => {
   }
 });
 
+app.get("/about", (req, res) => {
+  res.render('about', {
+    title: 'Job Search'
+  })
+});
+
+app.get("/contact", (req, res) => {
+  res.render('contact', {
+    title: 'Job Search'
+  })
+});
+
 //server running on port
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);

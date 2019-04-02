@@ -21,19 +21,21 @@
 
 <body>
 
-   <nav class="navbar">
+
+   <div class="navbar">
       <div class="title">
          <p>JOB SEARCH</p>
       </div>
       <div>
          <ul>
-            <li><a href="">Home </a></li>
-            <li><a href="#">Jobs </a></li>
-            <li><a href="#">About Us </a></li>
-            <li><a href="#">Contact Us </a></li>
+            <li><a href="/">Home </a></li>
+            <li><a href="/search">Jobs </a></li>
+            <li><a href="/about">About Us </a></li>
+            <li><a href="/contact">Contact Us </a></li>
          </ul>
       </div>
-   </nav>
+   </div>
+
 
    <main>
       <div class="searchbar">
@@ -47,7 +49,7 @@
       <div class="show-jobs">
          {{# each jobs }}
          <div class="card">
-            <div class="title">
+            <div class="card-title">
                <h2>{{this.title}}</h2>
             </div>
 
