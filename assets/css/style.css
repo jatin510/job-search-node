@@ -296,3 +296,66 @@ a {
    margin-bottom: 20px;
    width: 95%;
 }
+
+.column-img {
+   float: left;
+   width: 50%;
+}
+
+.card-img {
+   border: 2px solid black;
+   width: 500px;
+   height: 510px;
+   border-radius: 10px;
+   margin: 10px 100px;
+   padding: 40px;
+   background-color: lightgrey;
+   opacity: 0.75;
+   font-family: 'ABeeZee', sans-serif;
+
+}
+
+.container-img h4 {
+   font-size: 30px;
+}
+
+.container-img h2 {
+   margin: 20px 0;
+   font-size: 45px;
+}
+
+.container-img p {
+   margin: 20px 0;
+   font-size: 25px;
+}
+
+.container-img i {
+   font-size: 25px;
+   font-weight: bold;
+}
+
+.container-img {
+   font-size: 25px;
+}
+
+.container-img a {
+   color: rgba(0, 68, 255, 0.836);
+   font-weight: bold;
+   font-size: 30px;
+}
+
+#img h1 {
+   color: grey;
+   margin: 30px 50px;
+   font-family: 'ABeeZee', sans-serif;
+   -webkit-text-stroke-color: black;
+   -webkit-text-stroke-width: 0.2px;
+   font-size: 32px;
+   text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.589);
+
+}
+
+#img-footer {
+   top: 1330px;
+   position: relative;
+}
