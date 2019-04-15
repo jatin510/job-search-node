@@ -78,7 +78,11 @@ app.post("/feedback", (req, res) => {
     message: req.body.message
   });
 
-  res.send();
+  console.log(users)
+
+  res.send({
+
+  });
 });
 
 //server running on port
