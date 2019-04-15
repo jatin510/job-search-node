@@ -40,30 +40,35 @@
    <main>
       <div class="searchbar">
          <form action="search" method="get">
-            <input type="text" id="query" name="q" placeholder="Job Title....">
+            <input type="text" id="query" name="l" placeholder="Job Title....">
 
             <button type="submit">Find Jobs</button>
          </form>
       </div>
 
       <div class="show-jobs">
+
          {{# each jobs }}
          <div class="card">
+
             <div class="card-title">
                <h2>{{this.title}}</h2>
             </div>
-
+            <br>
             <div class="summary">
                {{this.summary}}
             </div>
             <br>
+            <b>Salary : </b> {{this.salary}}
+            <br>
             <div class="url">
                <a href="{{this.url}}">Read More</a>
             </div>
-
          </div>
          {{/each}}
+
       </div>
+
    </main>
 
    <footer>
