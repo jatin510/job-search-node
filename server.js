@@ -4,6 +4,8 @@ const express = require("express");
 // const expressip = require('express-ip')
 const path = require("path");
 // const handlebars = require("express-handlebars");
+const nodemailer = require("nodemailer");
+
 
 //port and starting express
 const app = express();
@@ -15,9 +17,53 @@ const exphbs = require("express-handlebars");
 app.set("view engine", "hbs");
 
 // app.use(expressip().getIpInfoMiddleware);
+app.use(express.json())
+app.use(express.urlencoded({
+  extended: true
+}))
 app.use(express.static(path.join(__dirname, "assets")));
 
 var users = [];
+
+
+async function main() {
+
+  console.log('inside mailer')
+  console.log(users)
+
+  // Generate test SMTP service account from ethereal.email
+  // Only needed if you don't have a real mail account for testing
+  let testAccount = await nodemailer.createTestAccount();
+
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass // generated ethereal password
+    }
+  });
+
+  // send mail with defined transport object
+  let info = await transporter.sendMail({
+    from: `jatin6972@gmail.com`, // sender address
+    to: `${users[0].email}`, // list of receivers
+    subject: ` SUGGESTION    `, // Subject line
+    text: ` ${users[0].message}    `, // plain text body
+    html: `<b> ${users[0].message}  </b>` // html body
+  });
+
+  console.log("Message sent: %s", info.messageId);
+  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+  // Preview only available when sending through an Ethereal account
+  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+}
+
+
 
 // get request to initial url
 // will open index.hbs file
@@ -71,6 +117,10 @@ app.get("/contact", (req, res) => {
 });
 
 app.post("/feedback", (req, res) => {
+
+
+  console.log('in feeback server')
+  console.log(req.body.name)
   users.push({
     name: req.body.name,
     email: req.body.email,
@@ -79,6 +129,7 @@ app.post("/feedback", (req, res) => {
   });
 
   console.log(users)
+  main();
 
   res.send({
 
@@ -89,3 +140,7 @@ app.post("/feedback", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
 });
+
+module.exports = {
+  users
+}

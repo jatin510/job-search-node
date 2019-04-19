@@ -1,18 +1,19 @@
 function feedbackShow() {
    console.log('i am inside feedback function')
 
-   $.get('/feedback',
-      () => {
-         $('#feedback').append(
-            $('<li>').text('Thank You For Your FeedBack')
-         )
-      }
-   )
+   // $.get('/feedback',
+   //    () => {
+   //       $('#feedback').append(
+   //          $('<li>').text('Thank You For Your FeedBack')
+   //       )
+   //    }
+   // )
 }
 
 $('#feedback-submit').click(() => {
-   $('#feedback').show()
-   console.log('button clicked')
+   $('#feedback').show();
+   console.log('button clicked');
+   console.log($('#feedback-name').val())
 
    $.post('/feedback', {
          name: $('#feedback-name').val(),
@@ -21,21 +22,18 @@ $('#feedback-submit').click(() => {
          message: $('#feedback-message').val()
       },
       () => {
-         console.log('show feedback called')
          feedbackShow()
       }
 
    )
 
-
-
 })
 
 
 
-//   $(() => {})
 
 $(() => {
+
    $('#feedback').hide()
 
 })
