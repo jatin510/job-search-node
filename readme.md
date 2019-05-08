@@ -24,15 +24,15 @@ This app is made using node technology. Here a user can find job on the basis of
 
 # SCREENSHOTS
 
-##HOME
+## HOME
 
 ![](screenshots/home.png)
 
-##JOBS
+## JOBS
 
 ![](screenshots/jobs.png)
 
-##ABOUT US
+## ABOUT US
 
 ![](screenshots/about.png)
 
