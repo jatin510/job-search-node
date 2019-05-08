@@ -15,10 +15,27 @@ This app is made using node technology. Here a user can find job on the basis of
 ## FEATURES
 
 - A user can find the job based on the job type.
+- It uses dummy API . The API is provided by https://indreed.herokuapp.com/.
 - A user can give their valuable suggestion which we will we get by mail.
 
-## Example
+## EXAMPLE
 
 ### If a user want a job as the nodejs developer , they can just type nodejs developer in the input.Then our app will show the various jobs in that particular field.
 
 # SCREENSHOTS
+
+##HOME
+
+![](screenshots/home.png)
+
+##JOBS
+
+![](screenshots/jobs.png)
+
+##ABOUT US
+
+![](screenshots/about.png)
+
+##CONTACT US
+
+![](screenshots/contact.png)
