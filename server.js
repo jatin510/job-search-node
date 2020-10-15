@@ -141,6 +141,11 @@ app.post("/feedback", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
 });
+app.get("//", (req, res) => {
+  res.render("index2", {
+    title: "Job Searching"
+  });
+});
 
 module.exports = {
   users
